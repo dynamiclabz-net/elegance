@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ELEGANCE — Where Fashion Flourishes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════ -->
+<nav class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <!-- Brand -->
+    <a href="#" class="nav-brand">
+      <span class="brand-dot"></span>
+      <span class="brand-wordmark">ELEGANCE</span>
+    </a>
+
+    <!-- Center links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link is-active">Home</a></li>
+      <li><a href="#shop" class="nav-link">Shop</a></li>
+      <li><a href="#sale" class="nav-link sale-link">Sale</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#showcase" class="nav-link">Showcase</a></li>
+    </ul>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <button class="nav-icon-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+      <button class="nav-icon-btn cart-btn" aria-label="Cart">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge">3</span>
+      </button>
+      <a href="#" class="btn-login">Login</a>
+      <a href="#" class="btn-signup">Sign up</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════
+     HERO — BANNER
+════════════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <!-- Subtle noise texture overlay -->
+  <div class="hero-noise"></div>
+
+  <!-- Hero text content -->
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      New Spring Collection 2025
+    </div>
+
+    <h1 class="hero-title">
+      <span class="title-line" data-delay="0">Where style speaks,</span>
+      <span class="title-line" data-delay="1">trends resonate,</span>
+      <span class="title-line accent-line" data-delay="2">fashion flourishes</span>
+    </h1>
+
+    <p class="hero-sub">
+      Unveiling a fashion destination where trends blend seamlessly<br>
+      with your individual style aspirations. Discover today.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#shop" class="btn-collection">
+        <span>New collection</span>
+        <div class="btn-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+      <a href="#about" class="btn-ghost">Our Story</a>
+    </div>
+  </div>
+
+  <!-- ─── ARCH CAROUSEL ─── -->
+  <div class="arch-carousel" id="archCarousel">
+    <button class="arch-nav arch-prev" id="archPrev" aria-label="Previous">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="arch-track-wrap">
+      <div class="arch-track" id="archTrack">
+
+        <!-- Card 1 -->
+        <div class="arch-card" data-idx="0">
+          <div class="arch-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=480&h=620&fit=crop&crop=top"
+              alt="Winter Coat Look"
+              class="arch-img" loading="lazy" />
+            <div class="arch-overlay">
+              <span class="arch-cat">Formal Wear</span>
+            </div>
+          </div>
+          <div class="arch-info">
+            <span class="arch-name">Noir Coat</span>
+            <span class="arch-price">PKR 8,900</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="arch-card" data-idx="1">
+          <div class="arch-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=480&h=620&fit=crop&crop=top"
+              alt="Elegant Suit"
+              class="arch-img" loading="lazy" />
+            <div class="arch-overlay">
+              <span class="arch-cat">Suit Collection</span>
+            </div>
+          </div>
+          <div class="arch-info">
+            <span class="arch-name">Ivory Blazer</span>
+            <span class="arch-price">PKR 12,500</span>
+          </div>
+        </div>
+
+        <!-- Card 3 — CENTER / FEATURED -->
+        <div class="arch-card is-featured" data-idx="2">
+          <div class="arch-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=480&h=620&fit=crop&crop=top"
+              alt="Elegance Main Look"
+              class="arch-img" loading="lazy" />
+            <div class="arch-overlay">
+              <span class="arch-cat">Co-ord Set</span>
+            </div>
+            <div class="price-bubble">
+              <span class="price-label">Price for all</span>
+              <span class="price-value">PKR 18,500</span>
+            </div>
+          </div>
+          <div class="arch-info">
+            <span class="arch-name">Desert Sand Set</span>
+            <span class="arch-price">PKR 18,500</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="arch-card" data-idx="3">
+          <div class="arch-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=480&h=620&fit=crop&crop=top"
+              alt="Street Style"
+              class="arch-img" loading="lazy" />
+            <div class="arch-overlay">
+              <span class="arch-cat">Casual Wear</span>
+            </div>
+          </div>
+          <div class="arch-info">
+            <span class="arch-name">Urban Edit</span>
+            <span class="arch-price">PKR 6,200</span>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="arch-card" data-idx="4">
+          <div class="arch-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=480&h=620&fit=crop&crop=top"
+              alt="White Minimalist"
+              class="arch-img" loading="lazy" />
+            <div class="arch-overlay">
+              <span class="arch-cat">Ready-made</span>
+            </div>
+          </div>
+          <div class="arch-info">
+            <span class="arch-name">Pure White</span>
+            <span class="arch-price">PKR 9,800</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="arch-nav arch-next" id="archNext" aria-label="Next">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="scroll-cue">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     MARQUEE TICKER
+════════════════════════════════════════════════ -->
+<div class="ticker-wrap">
+  <div class="ticker-inner">
+    <span>Unstitched Suits</span>
+    <span class="ticker-sep">—</span>
+    <span>Semi Stitched</span>
+    <span class="ticker-sep">—</span>
+    <span>Ready-mades</span>
+    <span class="ticker-sep">—</span>
+    <span>Salwar Suits</span>
+    <span class="ticker-sep">—</span>
+    <span>Co-ord Sets</span>
+    <span class="ticker-sep">—</span>
+    <span>Tops / Shirts</span>
+    <span class="ticker-sep">—</span>
+    <span>Elegance Exclusive</span>
+    <span class="ticker-sep">—</span>
+    <span>Sale — Up to 40% Off</span>
+    <span class="ticker-sep">—</span>
+    <span>Unstitched Suits</span>
+    <span class="ticker-sep">—</span>
+    <span>Semi Stitched</span>
+    <span class="ticker-sep">—</span>
+    <span>Ready-mades</span>
+    <span class="ticker-sep">—</span>
+    <span>Salwar Suits</span>
+    <span class="ticker-sep">—</span>
+    <span>Co-ord Sets</span>
+    <span class="ticker-sep">—</span>
+    <span>Tops / Shirts</span>
+    <span class="ticker-sep">—</span>
+    <span>Elegance Exclusive</span>
+    <span class="ticker-sep">—</span>
+    <span>Sale — Up to 40% Off</span>
+    <span class="ticker-sep">—</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     NEW COLLECTIONS — EDITORIAL GRID
+════════════════════════════════════════════════ -->
+<section class="editorial-section reveal-section" id="shop">
+  <div class="editorial-header">
+    <div class="label-row">
+      <span class="section-label"><span class="dot-label"></span>New Collections</span>
+      <a href="#" class="view-all-link">view a new collection <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="marquee-dot"></div>
+  </div>
+
+  <div class="editorial-grid">
+    <!-- Left tall card -->
+    <div class="ed-card ed-tall reveal-item">
+      <div class="ed-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1594938298603-c8148c4b4e37?w=600&h=900&fit=crop&crop=top"
+          alt="New Collection 1" loading="lazy" />
+        <div class="ed-label">
+          <span class="ed-tag"><i class="fas fa-plus-circle"></i></span>
+          <span>Salwar Suit</span>
+        </div>
+        <div class="ed-hover-cta">Shop Now</div>
+      </div>
+    </div>
+
+    <!-- Right stacked -->
+    <div class="ed-right-col">
+      <div class="ed-card reveal-item" style="--delay:0.15s">
+        <div class="ed-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1612336307429-8a898d10e223?w=600&h=440&fit=crop&crop=top"
+            alt="New Collection 2" loading="lazy" />
+          <div class="ed-label-bottom">
+            <span>Blazer</span>
+            <span class="ed-from">from PKR 12,000</span>
+          </div>
+          <div class="ed-hover-cta">Shop Now</div>
+        </div>
+      </div>
+
+      <div class="ed-card reveal-item" style="--delay:0.3s">
+        <div class="ed-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=600&h=440&fit=crop&crop=top"
+            alt="New Collection 3" loading="lazy" />
+          <div class="ed-label-bottom">
+            <span>Formal Suit</span>
+            <span class="ed-from">from PKR 16,500</span>
+          </div>
+          <div class="ed-hover-cta">Shop Now</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third large card -->
+    <div class="ed-card ed-third reveal-item" style="--delay:0.45s">
+      <div class="ed-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&h=900&fit=crop&crop=top"
+          alt="New Collection 4" loading="lazy" />
+        <div class="ed-label">
+          <span>Co-ord Set</span>
+        </div>
+        <div class="ed-hover-cta">Shop Now</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     CATEGORIES — SUITS
+════════════════════════════════════════════════ -->
+<section class="categories-section reveal-section" id="categories">
+  <div class="section-top">
+    <div class="label-row">
+      <span class="section-label"><span class="dot-label"></span>Categories in Suits</span>
+    </div>
+    <h2 class="section-heading reveal-item">Curated <em>for every</em><br>occasion.</h2>
+  </div>
+
+  <div class="cats-grid">
+    <div class="cat-card reveal-item" style="--delay:0s">
+      <div class="cat-img-wrap">
+        <img src="https://images.unsplash.com/photo-1551803091-e20673f15770?w=500&h=600&fit=crop" alt="Casual Wear" loading="lazy" />
+        <div class="cat-overlay"></div>
+      </div>
+      <div class="cat-body">
+        <h3>Casual Wear</h3>
+        <p>Effortless everyday style</p>
+        <a href="#" class="cat-link">Explore <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="cat-card reveal-item" style="--delay:0.1s">
+      <div class="cat-img-wrap">
+        <img src="https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=500&h=600&fit=crop" alt="Work Wear" loading="lazy" />
+        <div class="cat-overlay"></div>
+      </div>
+      <div class="cat-body">
+        <h3>Work Wear</h3>
+        <p>Professional, polished, powerful</p>
+        <a href="#" class="cat-link">Explore <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="cat-card reveal-item" style="--delay:0.2s">
+      <div class="cat-img-wrap">
+        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&h=600&fit=crop" alt="Semi-Formal" loading="lazy" />
+        <div class="cat-overlay"></div>
+      </div>
+      <div class="cat-body">
+        <h3>Semi-Formal</h3>
+        <p>Dressed up, never overdone</p>
+        <a href="#" class="cat-link">Explore <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="cat-card reveal-item" style="--delay:0.3s">
+      <div class="cat-img-wrap">
+        <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=500&h=600&fit=crop" alt="Formal / Occasion" loading="lazy" />
+        <div class="cat-overlay"></div>
+      </div>
+      <div class="cat-body">
+        <h3>Formal / Occasion</h3>
+        <p>For moments that matter</p>
+        <a href="#" class="cat-link">Explore <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="cat-card reveal-item" style="--delay:0.4s">
+      <div class="cat-img-wrap">
+        <img src="https://images.unsplash.com/photo-1523359346063-d879354c0ea5?w=500&h=600&fit=crop" alt="Trousseau" loading="lazy" />
+        <div class="cat-overlay"></div>
+      </div>
+      <div class="cat-body">
+        <h3>Trousseau Collection</h3>
+        <p>Bridal &amp; wedding ensembles</p>
+        <a href="#" class="cat-link">Explore <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     CUSTOMISED STITCHING BANNER
+════════════════════════════════════════════════ -->
+<section class="stitching-banner reveal-section">
+  <div class="stitch-bg">
+    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&h=800&fit=crop" alt="Stitching background" loading="lazy" />
+    <div class="stitch-gradient"></div>
+  </div>
+  <div class="stitch-content reveal-item">
+    <span class="stitch-eyebrow">Elegance Exclusive</span>
+    <h2 class="stitch-heading">Customised Stitching<br><em>Solutions</em></h2>
+    <p class="stitch-body">
+      Your vision, our craftsmanship. We tailor every stitch to perfection—<br>
+      from unstitched fabric to a flawless finished piece.
+    </p>
+    <div class="stitch-cta-row">
+      <a href="#" class="btn-stitch">Book a Consultation <i class="fas fa-arrow-right"></i></a>
+      <span class="stitch-note">Free first fitting included</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     ABOUT — EDITORIAL (matches Live-er reference)
+════════════════════════════════════════════════ -->
+<section class="about-section reveal-section" id="about">
+  <!-- Top meta bar -->
+  <div class="about-meta-bar reveal-item">
+    <span class="meta-item"><span class="dot-label"></span>About the brand</span>
+    <span class="meta-item">since 2018</span>
+    <span class="meta-item">bold by design</span>
+    <span class="meta-item">7 years in fashion</span>
+  </div>
+
+  <!-- Content grid -->
+  <div class="about-grid">
+    <div class="about-left reveal-item">
+      <h2 class="about-tagline">Born to<br>Stand Out</h2>
+    </div>
+
+    <div class="about-portrait reveal-item" style="--delay:0.2s">
+      <img
+        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=420&h=560&fit=crop&crop=top"
+        alt="Elegance brand portrait" loading="lazy" />
+    </div>
+
+    <div class="about-right reveal-item" style="--delay:0.35s">
+      <p class="about-body">
+        <strong>Elegance is bold, powerful, unapologetic.</strong><br>
+        Made for women who speak through style—loud and clear.<br><br>
+        From our atelier in Lahore, each piece is crafted with intention,
+        precision, and an obsession for detail that transforms fabric into identity.
+      </p>
+    </div>
+  </div>
+
+  <!-- Oversized wordmark (matches LIVE-HER reference) -->
+  <div class="about-wordmark reveal-item" style="--delay:0.5s">
+    <span class="wordmark-text" id="wordmarkText">ELEGANCE</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     PRODUCT GRID — LOOKBOOK
+════════════════════════════════════════════════ -->
+<section class="lookbook-section reveal-section" id="showcase">
+  <div class="section-top">
+    <div class="label-row">
+      <span class="section-label"><span class="dot-label"></span>Popular products</span>
+      <a href="#" class="view-all-link">view a catalog <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <h2 class="section-heading reveal-item">Desert <em>Pearl</em> — S/S 2025</h2>
+  </div>
+
+  <div class="lookbook-grid">
+    <div class="look-card lg-card reveal-item" style="--delay:0s">
+      <img src="https://images.unsplash.com/photo-1602810316693-3667c854239a?w=700&h=900&fit=crop&crop=top" alt="Look 1" loading="lazy" />
+      <div class="look-info">
+        <span class="look-name">Ivory Unstitched</span>
+        <span class="look-price">PKR 4,200 <i class="fas fa-expand-alt"></i></span>
+      </div>
+    </div>
+
+    <div class="look-card reveal-item" style="--delay:0.1s">
+      <img src="https://images.unsplash.com/photo-1608234807905-4466023792f5?w=450&h=540&fit=crop&crop=top" alt="Look 2" loading="lazy" />
+      <div class="look-info">
+        <span class="look-name">Crimson Blazer</span>
+        <span class="look-price">PKR 11,500 <i class="fas fa-expand-alt"></i></span>
+      </div>
+    </div>
+
+    <div class="look-card reveal-item" style="--delay:0.2s">
+      <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=450&h=540&fit=crop&crop=top" alt="Look 3" loading="lazy" />
+      <div class="look-info">
+        <span class="look-name">Beige Co-ord</span>
+        <span class="look-price">PKR 14,800 <i class="fas fa-expand-alt"></i></span>
+      </div>
+    </div>
+
+    <div class="look-card reveal-item" style="--delay:0.3s">
+      <img src="https://images.unsplash.com/photo-1532453288672-3a17f2e980fe?w=450&h=540&fit=crop&crop=top" alt="Look 4" loading="lazy" />
+      <div class="look-info">
+        <span class="look-name">Mocha Shirt</span>
+        <span class="look-price">PKR 3,800 <i class="fas fa-expand-alt"></i></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     TESTIMONIALS — Photo + Quote Layout
+════════════════════════════════════════════════ -->
+<section class="testimonials-section reveal-section">
+  <div class="section-top">
+    <div class="label-row">
+      <span class="section-label"><span class="dot-label"></span>What They&apos;re Saying</span>
+      <a href="#" class="view-all-link">all reviews <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <div class="testi-grid">
+    <!-- Photo card left -->
+    <div class="testi-photo-card reveal-item">
+      <img
+        src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=460&h=560&fit=crop&crop=top"
+        alt="Customer 1" loading="lazy" />
+      <span class="testi-brand-tag">ELEGANCE</span>
+    </div>
+
+    <!-- Text review center -->
+    <div class="testi-quote-card reveal-item" style="--delay:0.2s">
+      <div class="testi-quote-inner">
+        <div class="testi-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testi-q-name">Sana R., 27 — Lahore, PK</p>
+        <blockquote class="testi-q-text">
+          Every time I wear my Elegance co-ord set, I feel unstoppable.
+          The style is bold but never overdone. It fit perfectly straight
+          out of the box — that rarely happens!
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Photo card right -->
+    <div class="testi-photo-card reveal-item" style="--delay:0.4s">
+      <img
+        src="https://images.unsplash.com/photo-1554412933-514a83d2f3c8?w=460&h=560&fit=crop&crop=top"
+        alt="Customer 2" loading="lazy" />
+      <span class="testi-brand-tag">ELEGANCE</span>
+    </div>
+  </div>
+
+  <div class="testi-bottom-row reveal-item">
+    <div>
+      <p class="testi-bottom-lead">Real words. Real style.</p>
+      <p class="testi-bottom-sub">Our customers don&apos;t just wear Elegance — they own it.</p>
+    </div>
+    <p class="testi-bottom-right">Read what they think about the fit, feel, and boldness of every piece.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     LOCATIONS
+════════════════════════════════════════════════ -->
+<section class="locations-section reveal-section" id="locations">
+  <div class="section-top">
+    <div class="label-row">
+      <span class="section-label"><span class="dot-label"></span>Our Locations</span>
+    </div>
+    <h2 class="section-heading reveal-item">Find us in<br><em>your city.</em></h2>
+  </div>
+
+  <div class="loc-grid">
+    <div class="loc-card reveal-item" style="--delay:0s">
+      <div class="loc-img-wrap">
+        <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=600&h=400&fit=crop" alt="Lahore Store" loading="lazy" />
+        <div class="loc-overlay"></div>
+      </div>
+      <div class="loc-body">
+        <h3>Lahore</h3>
+        <p>MM Alam Road, Gulberg III</p>
+        <p class="loc-hours">Mon–Sun: 11am – 9pm</p>
+        <a href="#" class="loc-dir">Get Directions <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="loc-card reveal-item" style="--delay:0.15s">
+      <div class="loc-img-wrap">
+        <img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=600&h=400&fit=crop" alt="Karachi Store" loading="lazy" />
+        <div class="loc-overlay"></div>
+      </div>
+      <div class="loc-body">
+        <h3>Karachi</h3>
+        <p>Dolmen Mall, Clifton</p>
+        <p class="loc-hours">Mon–Sun: 11am – 10pm</p>
+        <a href="#" class="loc-dir">Get Directions <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="loc-card reveal-item" style="--delay:0.3s">
+      <div class="loc-img-wrap">
+        <img src="https://images.unsplash.com/photo-1512453394486-3ead5cb400ca?w=600&h=400&fit=crop" alt="Islamabad Store" loading="lazy" />
+        <div class="loc-overlay"></div>
+      </div>
+      <div class="loc-body">
+        <h3>Islamabad</h3>
+        <p>Centaurus Mall, Blue Area</p>
+        <p class="loc-hours">Mon–Sun: 11am – 9pm</p>
+        <a href="#" class="loc-dir">Get Directions <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     CTA / FULLSCREEN DARK BANNER
+════════════════════════════════════════════════ -->
+<section class="cta-dark reveal-section">
+  <div class="cta-bg-img">
+    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1600&h=800&fit=crop" alt="CTA background" loading="lazy" />
+    <div class="cta-gradient"></div>
+  </div>
+  <div class="cta-inner reveal-item">
+    <h2 class="cta-heading">Start your Elegance<br>journey <em>today</em>.</h2>
+    <a href="#" class="btn-cta-white">
+      <span>Explore Collection</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="footer-logo">
+        <span class="brand-dot"></span>
+        <span>ELEGANCE</span>
+      </a>
+      <p>Premium fashion for women who<br>speak through style.</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">Unstitched Suits</a></li>
+          <li><a href="#">Semi Stitched</a></li>
+          <li><a href="#">Ready-mades</a></li>
+          <li><a href="#">Salwar Suits</a></li>
+          <li><a href="#">Co-ord Sets</a></li>
+          <li><a href="#">Tops / Shirts</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="#">Casual Wear</a></li>
+          <li><a href="#">Work Wear</a></li>
+          <li><a href="#">Semi-Formal</a></li>
+          <li><a href="#">Formal / Occasion</a></li>
+          <li><a href="#">Trousseau</a></li>
+          <li><a href="#">Sale</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Locations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Returns &amp; Exchange</a></li>
+          <li><a href="#">Custom Stitching</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom-bar">
+    <span>Address</span>
+    <span>MM Alam Rd, Lahore, Pakistan</span>
+    <span>Email</span>
+    <span>hello@elegance.pk</span>
+    <span>&copy; 2025 Elegance. All rights reserved.</span>
+    <a href="#home" class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
