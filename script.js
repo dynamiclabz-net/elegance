@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (track && prevBtn && nextBtn) {
     const cards = Array.from(track.querySelectorAll('.arch-card'));
+    const cardCount = cards.length;
     let current = 2; // start at featured center
 
     function getCardWidth() {
@@ -90,8 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function goTo(idx) {
-      const max = cards.length - 1;
-      current = Math.max(0, Math.min(idx, max));
+      // Infinite loop: wrap index to stay within bounds
+      current = ((idx % cardCount) + cardCount) % cardCount;
       const offset = current * getCardWidth();
       track.style.transform = `translateX(-${offset}px)`;
 
@@ -102,13 +103,13 @@ document.addEventListener('DOMContentLoaded', () => {
           c.style.opacity = '1';
           c.style.transform = 'translateY(-28px) scale(1.03)';
         } else if (dist === 1) {
-          c.style.opacity = '0.72';
+          c.style.opacity = '1';
           c.style.transform = 'translateY(-8px) scale(0.98)';
         } else if (dist === 2) {
-          c.style.opacity = '0.45';
+          c.style.opacity = '1';
           c.style.transform = 'translateY(0px) scale(0.95)';
         } else {
-          c.style.opacity = '0.25';
+          c.style.opacity = '1';
           c.style.transform = 'translateY(4px) scale(0.92)';
         }
       });
@@ -139,20 +140,20 @@ document.addEventListener('DOMContentLoaded', () => {
       if (Math.abs(dx) > 50) goTo(current + (dx < 0 ? 1 : -1));
     });
 
-    // Autoplay
-    let autoplay = setInterval(() => goTo(current < cards.length - 1 ? current + 1 : 0), 4000);
+    // Autoplay with infinite loop
+    let autoplay = setInterval(() => goTo(current + 1), 4000);
     const wrap = track.closest('.arch-carousel');
     if (wrap) {
       wrap.addEventListener('mouseenter', () => clearInterval(autoplay));
       wrap.addEventListener('mouseleave', () => {
-        autoplay = setInterval(() => goTo(current < cards.length - 1 ? current + 1 : 0), 4000);
+        autoplay = setInterval(() => goTo(current + 1), 4000);
       });
     }
 
     // Click on card to center it
     cards.forEach((c, i) => c.addEventListener('click', () => goTo(i)));
 
-    goTo(2);
+    goTo(0);
   }
 
 
