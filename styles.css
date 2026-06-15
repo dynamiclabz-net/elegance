@@ -21,7 +21,8 @@
   --text-3: #6a6460;
 
   /* Accent — warm cream/gold */
-  --accent:    #d4a96a;
+  /* --accent:    #d4a96a; */
+  --accent:    #daa520;
   --accent-dk: #b8864a;
 
   /* Fonts */
