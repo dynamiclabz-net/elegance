@@ -141,12 +141,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Autoplay with infinite loop
-    let autoplay = setInterval(() => goTo(current + 1), 4000);
+    let autoplay = setInterval(() => goTo(current + 1), 400000);
     const wrap = track.closest('.arch-carousel');
     if (wrap) {
       wrap.addEventListener('mouseenter', () => clearInterval(autoplay));
       wrap.addEventListener('mouseleave', () => {
-        autoplay = setInterval(() => goTo(current + 1), 4000);
+        autoplay = setInterval(() => goTo(current + 1), 400000);
       });
     }
 
