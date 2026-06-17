@@ -106,20 +106,38 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
+  /* height: 70px; */
   gap: 32px;
 }
 
+
 /* Brand */
 .nav-brand {
-  display: flex; align-items: center; gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
   font-family: var(--font-serif);
   font-size: 22px;
   font-weight: 600;
   letter-spacing: 3px;
   color: var(--text-1);
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
 }
+.nav-logo{
+    height: 90px;
+    width: auto;
+    padding: 8px 0; /* Adjust 6px–10px to your liking */
+    display: block;
+}
+
+.nav-links,
+.nav-actions,
+.nav-brand {
+    display: flex;
+    align-items: center;
+}
+
 .brand-dot {
   width: 8px; height: 8px;
   background: var(--accent);
@@ -134,8 +152,11 @@ ul { list-style: none; }
 
 /* Nav links */
 .nav-links {
-  display: flex; align-items: center; gap: 36px;
-  flex: 1; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  flex: 1;
 }
 .nav-links .nav-link {
   font-size: 13px;
@@ -167,8 +188,11 @@ ul { list-style: none; }
 
 /* Nav actions */
 .nav-actions {
-  display: flex; align-items: center; gap: 12px;
-  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex: 1;
 }
 .nav-icon-btn {
   background: none; border: none;
@@ -1484,7 +1508,7 @@ ul { list-style: none; }
 
 @media (max-width: 480px) {
   .hero-title { font-size: 38px; }
-  .arch-track { padding: 0 40px; }
+  /* .arch-track { padding: 0 40px; } */
   .arch-card { flex: 0 0 78vw; }
   .cta-heading { font-size: 36px; }
   .stitch-heading { font-size: 36px; }

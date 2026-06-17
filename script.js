@@ -86,31 +86,53 @@ document.addEventListener('DOMContentLoaded', () => {
     let current = 2; // start at featured center
 
     function getCardWidth() {
-      if (!cards[0]) return 220;
-      return cards[0].getBoundingClientRect().width + 14;
+      if (!cards[0]) return 220;      
+      return cards[0].getBoundingClientRect().width + 32;
     }
 
     function goTo(idx) {
       // Infinite loop: wrap index to stay within bounds
       current = ((idx % cardCount) + cardCount) % cardCount;
+      console.log("current")
+      console.log(current)
       const offset = current * getCardWidth();
+      console.log("offset")
+      console.log(offset)
       track.style.transform = `translateX(-${offset}px)`;
+
+      // cards.forEach((c, i) => {
+      //   const dist = Math.abs(i - current);
+      //   c.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      //   if (dist === 0) {
+      //     c.style.opacity = '1';
+      //     c.style.transform = 'translateY(-28px) scale(1.03)';
+      //   } else if (dist === 1) {
+      //     c.style.opacity = '1';
+      //     c.style.transform = 'translateY(-8px) scale(0.98)';
+      //   } else if (dist === 2) {
+      //     c.style.opacity = '1';
+      //     c.style.transform = 'translateY(0px) scale(0.95)';
+      //   } else {
+      //     c.style.opacity = '1';
+      //     c.style.transform = 'translateY(4px) scale(0.92)';
+      //   }
+      // });
 
       cards.forEach((c, i) => {
         const dist = Math.abs(i - current);
         c.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
         if (dist === 0) {
           c.style.opacity = '1';
-          c.style.transform = 'translateY(-28px) scale(1.03)';
+          c.style.transform = 'scale(1)';
         } else if (dist === 1) {
           c.style.opacity = '1';
-          c.style.transform = 'translateY(-8px) scale(0.98)';
+          c.style.transform = 'scale(0.98)';
         } else if (dist === 2) {
           c.style.opacity = '1';
-          c.style.transform = 'translateY(0px) scale(0.95)';
+          c.style.transform = 'scale(0.95)';
         } else {
           c.style.opacity = '1';
-          c.style.transform = 'translateY(4px) scale(0.92)';
+          c.style.transform = 'scale(0.92)';
         }
       });
     }
@@ -140,15 +162,19 @@ document.addEventListener('DOMContentLoaded', () => {
       if (Math.abs(dx) > 50) goTo(current + (dx < 0 ? 1 : -1));
     });
 
-    // Autoplay with infinite loop
-    let autoplay = setInterval(() => goTo(current + 1), 400000);
-    const wrap = track.closest('.arch-carousel');
-    if (wrap) {
-      wrap.addEventListener('mouseenter', () => clearInterval(autoplay));
-      wrap.addEventListener('mouseleave', () => {
-        autoplay = setInterval(() => goTo(current + 1), 400000);
-      });
-    }
+    if (window.innerWidth <= 768) {
+      // Autoplay with infinite loop
+      let autoplay = setInterval(() => goTo(current + 1), 5000);
+      const wrap = track.closest('.arch-carousel');
+      if (wrap) {
+        wrap.addEventListener('mouseenter', () => clearInterval(autoplay));
+        wrap.addEventListener('mouseleave', () => {
+          autoplay = setInterval(() => goTo(current + 1), 5000);
+        });
+      }
+    } else {
+        console.log("Desktop");
+    }    
 
     // Click on card to center it
     cards.forEach((c, i) => c.addEventListener('click', () => goTo(i)));
