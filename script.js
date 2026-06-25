@@ -264,3 +264,31 @@ document.addEventListener('DOMContentLoaded', () => {
   window.dispatchEvent(new Event('scroll'));
 
 });
+
+
+document.querySelectorAll(".reel-card video").forEach(video => {
+
+    video.play().catch(()=>{});
+
+});
+
+const slider=document.getElementById('reelSlider');
+
+if(slider){
+
+    slider.addEventListener('slid.bs.carousel',function(){
+
+        document.querySelectorAll('#reelSlider video').forEach(v=>{
+
+            v.pause();
+            v.currentTime=0;
+
+        });
+
+        const active=this.querySelector('.carousel-item.active video');
+
+        active.play().catch(()=>{});
+
+    });
+
+}
